@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/RevaSA/typescript-project-81/issues"
   },
-  "homepage": "https://github.com/RevaSA/typescript-project-81#readme"
+  "homepage": "https://github.com/RevaSA/typescript-project-81#readme",
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "typescript": "^5.6.2"
+  }
 }

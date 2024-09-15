@@ -1,1 +1,1 @@
-export type AttrsType = Record<string, string>
+export type AttrsType = Record<string, string>;

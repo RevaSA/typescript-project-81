@@ -45,5 +45,7 @@ export default class Tag {
     if (this.isPaired) {
       return this.getPairedTemplate();
     }
+
+    return '';
   }
 }

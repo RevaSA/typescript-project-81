@@ -39,5 +39,3 @@ test('div', () => {
 
   expect(tag.toString()).toBe('<div></div>');
 });
-
-

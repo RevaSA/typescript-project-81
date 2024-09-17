@@ -5,8 +5,6 @@ import Tag from './tag';
 test('br', () => {
   const tag = new Tag('br');
 
-  // <br>
-
   expect(tag.toString()).toBe('<br>');
 });
 

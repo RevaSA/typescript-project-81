@@ -1,20 +1,10 @@
-import Tag from './classes/tag';
+import HexletCode from './classes/hexlet-code';
 
-console.log(new Tag('br').toString());
-// <br>
+// Создаем шаблон template с полями name, job и gender, задаем им имена
+const template = { name: 'rob', job: 'hexlet', gender: 'm' };
 
-console.log(new Tag('img', { src: 'path/to/image' }).toString());
-// <img src="path/to/image">
+console.log(HexletCode.formFor(template, {}, (f) => {}));
+// <form action="#" method="post"></form>
 
-console.log(new Tag('input', { type: 'submit', value: 'Save' }).toString());
-// <input type="submit" value="Save">
-
-// Для парных тегов надо придумать как лучше
-console.log(new Tag('label', {}, 'Email').toString());
-// <label>Email</label>
-
-console.log(new Tag('label', { for: 'email' }, 'Email').toString());
-// <label for="email">Email</label>
-
-console.log(new Tag('div').toString());
-// <div></div>
+console.log(HexletCode.formFor(template, {url: '/users'}, (f) => {}));
+// <form action="/users" method="post"></form>

@@ -5,6 +5,7 @@ export const SINGLE_TAG : Record<string, string> = {
 };
 
 export const PAIRED_TAG: Record<string, string> = {
+  FORM: 'form',
   LABEL: 'label',
   DIV: 'div',
 };

@@ -1,12 +1,13 @@
 import { FormAttrs } from '../types/form';
-import { SINGLE_TAG, PAIRED_TAG } from '../constants/tag';
 import Tag from './tag';
 
 export default class HexletCode {
-  static formFor(template: {}, attrs: FormAttrs, cb: (val: any) => void): string {
+  static formFor(template: object, attrs: FormAttrs, cb: (val: unknown) => void): string {
+    console.log('%ccb', 'font-weight:900; color:firebrick;', cb);
+
     const tagAttrs = {
       action: attrs.url || '#',
-    }
+    };
 
     return new Tag('form', tagAttrs).toString();
   }

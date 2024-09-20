@@ -7,6 +7,7 @@ export default class HexletCode {
 
     const tagAttrs = {
       action: attrs.url || '#',
+      method: 'post',
     };
 
     return new Tag('form', tagAttrs).toString();

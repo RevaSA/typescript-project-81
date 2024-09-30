@@ -19,21 +19,25 @@ export default class Tag {
 
     this.isSingle = Object.values(SINGLE_TAG).includes(this.tag);
     this.isPaired = Object.values(PAIRED_TAG).includes(this.tag);
+
+    if(!this.isSingle && !this.isPaired) {
+      throw new Error(`Tag ${this.tag} is not supported`);
+    }
   }
 
-  protected getAttrsText(): string {
+  protected getAttrsText() {
     return Object.entries(this.attrs)
       .map(([key, value]) => `${key}="${value}"`)
       .join(' ');
   }
 
-  protected getSingleTemplate(): string {
+  protected getSingleTemplate() {
     const attrText = this.getAttrsText();
 
     return `<${this.tag}${attrText ? ` ${attrText}` : ''}>`;
   }
 
-  protected getPairedTemplate(): string {
+  protected getPairedTemplate() {
     return `${this.getSingleTemplate()}${this.content}</${this.tag}>`;
   }
 

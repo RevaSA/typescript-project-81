@@ -1,5 +1,6 @@
+import { SINGLE_TAGS, PAIRED_TAGS } from '../constants/tag';
+
 import { AttrsType } from '../types/tag';
-import { SINGLE_TAG, PAIRED_TAG } from '../constants/tag';
 
 export default class Tag {
   tag: string;
@@ -17,8 +18,8 @@ export default class Tag {
     this.attrs = attrs;
     this.content = content;
 
-    this.isSingle = Object.values(SINGLE_TAG).includes(this.tag);
-    this.isPaired = Object.values(PAIRED_TAG).includes(this.tag);
+    this.isSingle = SINGLE_TAGS.includes(this.tag);
+    this.isPaired = PAIRED_TAGS.includes(this.tag);
   }
 
   protected getAttrsText(): string {

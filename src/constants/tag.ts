@@ -9,3 +9,7 @@ export const PAIRED_TAG: Record<string, string> = {
   LABEL: 'label',
   DIV: 'div',
 };
+
+export const SINGLE_TAGS = Object.values(SINGLE_TAG);
+
+export const PAIRED_TAGS = Object.values(PAIRED_TAG);

@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 
-import HexletCode from './hexlet-code';
+import HexletCode from '../src/classes/hexlet-code';
 
 test('form without action', () => {
   const template = { name: 'rob', job: 'hexlet', gender: 'm' };

@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 
-import Tag from './tag';
+import Tag from '../src/classes/tag';
 
 test('br', () => {
   const tag = new Tag('br');
